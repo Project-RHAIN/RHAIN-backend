@@ -24,7 +24,7 @@ async def read_root() -> dict:
     return {"message": "Welcome to the RHAIN server"}
 
 
-@app.get("/county-info")
+@app.get("/clinical-care")
 def get_county_info(county_name: str):
     # Filter the rows by county
     data = getClinicalData(county_name)
