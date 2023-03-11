@@ -7,8 +7,8 @@ from random import sample
 import os
 
 
-data_path_reviews = os.path.join(os.getcwd(), 'data\BackendReviews.csv')
-data_path_model = os.path.join(os.getcwd(), 'DistilBert')
+data_path_reviews = os.path.join(os.getcwd(), 'app\data\BackendReviews.csv')
+data_path_model = os.path.join(os.getcwd(), 'app\DistilBert')
 
 df = pd.read_csv(data_path_reviews)
 dbModel = tf.keras.models.load_model(data_path_model)
@@ -38,7 +38,8 @@ def score_compute(reviews, model, tokenizer):
 
 def get_sentiment_score(state_name, county_name):
     reviews = get_reviews(county_name)
-    return (score_compute(reviews, dbModel, dbTokenizer) + 1) * 5
+    score = round((score_compute(reviews, dbModel, dbTokenizer) + 1) * 5, 2)
+    return {"Perception score": score}
 
 
 
