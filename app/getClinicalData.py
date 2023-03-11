@@ -7,7 +7,7 @@ def convertRatio (x):
         return np.nan
     a, b = x.split(':') 
     c = int(a)/int(b) 
-    return c 
+    return c
 
 def getClinicalData(state_name, county_name):
 
