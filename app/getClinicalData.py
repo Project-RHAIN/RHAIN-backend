@@ -1,6 +1,6 @@
 import pandas as pd
 
-def getClinicalData(county_name):
+def getClinicalData(state_name, county_name):
     # Read the Excel file into a pandas dataframe
     df = pd.read_excel('app/data/Clinical_Care_CA.xlsx')    
 

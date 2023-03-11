@@ -25,8 +25,8 @@ async def read_root() -> dict:
 
 
 @app.get("/clinical-care")
-def get_county_info(county_name: str):
+def get_county_info(state_name: str, county_name: str):
     # Filter the rows by county
-    data = getClinicalData(county_name)
+    data = getClinicalData(state_name, county_name)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
