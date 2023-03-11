@@ -2,7 +2,7 @@ import pandas as pd
 
 def getClinicalData(state_name, county_name):
     # Read the Excel file into a pandas dataframe
-    df = pd.read_excel('app/data/Clinical_Care_CA.xlsx')    
+    df = pd.read_excel('./data/Clinical_Care_CA.xlsx')
 
     # Filter the rows by county
     county_df = df.loc[df['County'] == county_name]
