@@ -21,15 +21,15 @@ python main.py
 Note:
 
 For perception score generation, reviews are available only for select counties from the following states:
-California
-Maryland
-New Jersey
-Florida
-Texas
-Washington
-New York
-Nevada
-Pennsylvania
-Ohio
+California,
+Maryland,
+New Jersey,
+Florida,
+Texas,
+Washington,
+New York,
+Nevada,
+Pennsylvania,
+Ohio.
 
 If reviews are available, score will be generated otherwise it will display a message saying no reviews available and hence no score.
