@@ -48,7 +48,7 @@ def score_compute(reviews, model, tokenizer):
 #     return {"Perception score": score}
 
 def get_score(state_name, county_name):
-    score = rows.get((state_name, county_name))
+    score = rows.get((state_name, county_name), 'nan')
     if score != 'nan':
         return score
     else:
