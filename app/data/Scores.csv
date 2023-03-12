@@ -1,0 +1,698 @@
+State,County,Score
+California,Alameda,4.76022061
+California,Alpine,6.270267814
+California,Amador,nan
+California,Butte,nan
+California,Calaveras,5.2174953
+California,Colusa,nan
+California,Contra Costa,6.406946033
+California,Del Norte,nan
+California,El Dorado,6.262046099
+California,Fresno,nan
+California,Glenn,nan
+California,Humboldt,nan
+California,Imperial,nan
+California,Inyo,nan
+California,Kern,nan
+California,Kings,nan
+California,Lake,nan
+California,Lassen,nan
+California,Los Angeles,4.433270469
+California,Madera,nan
+California,Marin,nan
+California,Mariposa,nan
+California,Mendocino,nan
+California,Merced,nan
+California,Modoc,nan
+California,Mono,nan
+California,Monterey,6.495561302
+California,Napa,nan
+California,Nevada,6.764689982
+California,Orange,nan
+California,Placer,nan
+California,Plumas,nan
+California,Riverside,nan
+California,Sacramento,4.057306647
+California,San Benito,nan
+California,San Bernardino,5.072327605
+California,San Diego,nan
+California,San Francisco,nan
+California,San Joaquin,nan
+California,San Luis Obispo,nan
+California,San Mateo,nan
+California,Santa Barbara,6.715540439
+California,Santa Clara,nan
+California,Santa Cruz,nan
+California,Shasta,nan
+California,Sierra,nan
+California,Siskiyou,nan
+California,Solano,nan
+California,Sonoma,nan
+California,Stanislaus,nan
+California,Sutter,5.819451809
+California,Tehama,nan
+California,Trinity,6.539911628
+California,Tulare,nan
+California,Tuolumne,4.039639458
+California,Ventura,nan
+California,Yolo,7.14763552
+California,Yuba,nan
+Florida,Alachua,nan
+Florida,Baker,nan
+Florida,Bay,nan
+Florida,Bradford,nan
+Florida,Brevard,nan
+Florida,Broward,nan
+Florida,Calhoun,nan
+Florida,Charlotte,nan
+Florida,Citrus,nan
+Florida,Clay,nan
+Florida,Collier,nan
+Florida,Columbia,6.501360089
+Florida,DeSoto,nan
+Florida,Dixie,nan
+Florida,Duval,nan
+Florida,Escambia,nan
+Florida,Flagler,nan
+Florida,Franklin,6.273784935
+Florida,Gadsden,nan
+Florida,Gilchrist,nan
+Florida,Glades,nan
+Florida,Gulf,nan
+Florida,Hamilton,5.786801428
+Florida,Hardee,nan
+Florida,Hendry,nan
+Florida,Hernando,nan
+Florida,Highlands,nan
+Florida,Hillsborough,5.86107932
+Florida,Holmes,nan
+Florida,Indian River,nan
+Florida,Jackson,7.13179186
+Florida,Jefferson,5.191931408
+Florida,Lafayette,nan
+Florida,Lake,nan
+Florida,Lee,nan
+Florida,Leon,nan
+Florida,Levy,nan
+Florida,Liberty,nan
+Florida,Madison,3.191309273
+Florida,Manatee,nan
+Florida,Marion,5.492814369
+Florida,Martin,nan
+Florida,Miami-Dade,nan
+Florida,Monroe,3.051220924
+Florida,Nassau,nan
+Florida,Okaloosa,nan
+Florida,Okeechobee,nan
+Florida,Orange,nan
+Florida,Osceola,nan
+Florida,Palm Beach,nan
+Florida,Pasco,3.147817403
+Florida,Pinellas,4.166967794
+Florida,Polk,4.091973677
+Florida,Putnam,1.624462605
+Florida,St. Johns,nan
+Florida,St. Lucie,nan
+Florida,Santa Rosa,nan
+Florida,Sarasota,nan
+Florida,Seminole,nan
+Florida,Sumter,nan
+Florida,Suwannee,nan
+Florida,Taylor,4.326187521
+Florida,Union,1.269194484
+Florida,Volusia,nan
+Florida,Wakulla,nan
+Florida,Walton,nan
+Florida,Washington,3.119795173
+Maryland,Allegany,nan
+Maryland,Anne Arundel,nan
+Maryland,Baltimore,nan
+Maryland,Calvert,nan
+Maryland,Caroline,nan
+Maryland,Carroll,nan
+Maryland,Cecil,nan
+Maryland,Charles,nan
+Maryland,Dorchester,nan
+Maryland,Frederick,nan
+Maryland,Garrett,nan
+Maryland,Harford,nan
+Maryland,Howard,5.38189631
+Maryland,Kent,nan
+Maryland,Montgomery,4.809386972
+Maryland,Prince George's,nan
+Maryland,Queen Anne's,nan
+Maryland,St. Mary's,nan
+Maryland,Somerset,nan
+Maryland,Talbot,nan
+Maryland,Washington,3.119795173
+Maryland,Wicomico,nan
+Maryland,Worcester,nan
+Maryland,"Baltimore, City of",nan
+New Jersey,Atlantic,nan
+New Jersey,Bergen,nan
+New Jersey,Burlington,5.379642546
+New Jersey,Camden,6.579811871
+New Jersey,Cape May,nan
+New Jersey,Cumberland,nan
+New Jersey,Essex,nan
+New Jersey,Gloucester,3.684024513
+New Jersey,Hudson,nan
+New Jersey,Hunterdon,nan
+New Jersey,Mercer,nan
+New Jersey,Middlesex,nan
+New Jersey,Monmouth,nan
+New Jersey,Morris,nan
+New Jersey,Ocean,nan
+New Jersey,Passaic,nan
+New Jersey,Salem,1.962743402
+New Jersey,Somerset,nan
+New Jersey,Sussex,nan
+New Jersey,Union,1.269194484
+New Jersey,Warren,nan
+Texas,Anderson,nan
+Texas,Andrews,nan
+Texas,Angelina,nan
+Texas,Aransas,nan
+Texas,Archer,nan
+Texas,Armstrong,nan
+Texas,Atascosa,nan
+Texas,Austin,nan
+Texas,Bailey,nan
+Texas,Bandera,nan
+Texas,Bastrop,nan
+Texas,Baylor,nan
+Texas,Bee,nan
+Texas,Bell,nan
+Texas,Bexar,nan
+Texas,Blanco,nan
+Texas,Borden,nan
+Texas,Bosque,nan
+Texas,Bowie,nan
+Texas,Brazoria,nan
+Texas,Brazos,nan
+Texas,Brewster,nan
+Texas,Briscoe,nan
+Texas,Brooks,nan
+Texas,Brown,4.664063379
+Texas,Burleson,nan
+Texas,Burnet,nan
+Texas,Caldwell,nan
+Texas,Calhoun,nan
+Texas,Callahan,nan
+Texas,Cameron,nan
+Texas,Camp,nan
+Texas,Carson,nan
+Texas,Cass,nan
+Texas,Castro,nan
+Texas,Chambers,nan
+Texas,Cherokee,4.243773073
+Texas,Childress,nan
+Texas,Clay,nan
+Texas,Cochran,nan
+Texas,Coke,nan
+Texas,Coleman,nan
+Texas,Collin,nan
+Texas,Collingsworth,nan
+Texas,Colorado,nan
+Texas,Comal,nan
+Texas,Comanche,nan
+Texas,Concho,nan
+Texas,Cooke,nan
+Texas,Coryell,nan
+Texas,Cottle,nan
+Texas,Crane,nan
+Texas,Crockett,nan
+Texas,Crosby,nan
+Texas,Culberson,nan
+Texas,Dallam,nan
+Texas,Dallas,nan
+Texas,Dawson,nan
+Texas,Deaf Smith,nan
+Texas,Delta,nan
+Texas,Denton,nan
+Texas,DeWitt,nan
+Texas,Dickens,nan
+Texas,Dimmit,nan
+Texas,Donley,nan
+Texas,Duval,nan
+Texas,Eastland,nan
+Texas,Ector,nan
+Texas,Edwards,nan
+Texas,Ellis,nan
+Texas,El Paso,nan
+Texas,Erath,nan
+Texas,Falls,nan
+Texas,Fannin,nan
+Texas,Fayette,nan
+Texas,Fisher,nan
+Texas,Floyd,nan
+Texas,Foard,nan
+Texas,Fort Bend,nan
+Texas,Franklin,6.273784935
+Texas,Freestone,nan
+Texas,Frio,nan
+Texas,Gaines,4.748992678
+Texas,Galveston,nan
+Texas,Garza,nan
+Texas,Gillespie,nan
+Texas,Glasscock,nan
+Texas,Goliad,nan
+Texas,Gonzales,nan
+Texas,Gray,nan
+Texas,Grayson,3.403459787
+Texas,Gregg,nan
+Texas,Grimes,nan
+Texas,Guadalupe,nan
+Texas,Hale,nan
+Texas,Hall,nan
+Texas,Hamilton,5.786801428
+Texas,Hansford,nan
+Texas,Hardeman,nan
+Texas,Hardin,2.112467885
+Texas,Harris,nan
+Texas,Harrison,7.021929473
+Texas,Hartley,nan
+Texas,Haskell,nan
+Texas,Hays,nan
+Texas,Hemphill,nan
+Texas,Henderson,4.57528837
+Texas,Hidalgo,nan
+Texas,Hill,3.137567937
+Texas,Hockley,nan
+Texas,Hood,nan
+Texas,Hopkins,nan
+Texas,Houston,nan
+Texas,Howard,5.38189631
+Texas,Hudspeth,nan
+Texas,Hunt,nan
+Texas,Hutchinson,nan
+Texas,Irion,nan
+Texas,Jack,nan
+Texas,Jackson,7.13179186
+Texas,Jasper,nan
+Texas,Jeff Davis,nan
+Texas,Jefferson,5.191931408
+Texas,Jim Hogg,nan
+Texas,Jim Wells,nan
+Texas,Johnson,5.847028941
+Texas,Jones,nan
+Texas,Karnes,nan
+Texas,Kaufman,nan
+Texas,Kendall,3.859635815
+Texas,Kenedy,nan
+Texas,Kent,nan
+Texas,Kerr,nan
+Texas,Kimble,nan
+Texas,King,nan
+Texas,Kinney,nan
+Texas,Kleberg,nan
+Texas,Knox,nan
+Texas,Lamar,nan
+Texas,Lamb,nan
+Texas,Lampasas,nan
+Texas,La Salle,nan
+Texas,Lavaca,nan
+Texas,Lee,nan
+Texas,Leon,nan
+Texas,Liberty,nan
+Texas,Limestone,nan
+Texas,Lipscomb,nan
+Texas,Live Oak,nan
+Texas,Llano,nan
+Texas,Loving,nan
+Texas,Lubbock,nan
+Texas,Lynn,nan
+Texas,McCulloch,nan
+Texas,McLennan,nan
+Texas,McMullen,nan
+Texas,Madison,3.191309273
+Texas,Marion,5.492814369
+Texas,Martin,nan
+Texas,Mason,nan
+Texas,Matagorda,nan
+Texas,Maverick,nan
+Texas,Medina,nan
+Texas,Menard,nan
+Texas,Midland,nan
+Texas,Milam,nan
+Texas,Mills,nan
+Texas,Mitchell,nan
+Texas,Montague,nan
+Texas,Montgomery,4.809386972
+Texas,Moore,nan
+Texas,Morris,nan
+Texas,Motley,nan
+Texas,Nacogdoches,nan
+Texas,Navarro,nan
+Texas,Newton,nan
+Texas,Nolan,nan
+Texas,Nueces,nan
+Texas,Ochiltree,nan
+Texas,Oldham,nan
+Texas,Orange,nan
+Texas,Palo Pinto,nan
+Texas,Panola,nan
+Texas,Parker,nan
+Texas,Parmer,nan
+Texas,Pecos,nan
+Texas,Polk,4.091973677
+Texas,Potter,nan
+Texas,Presidio,nan
+Texas,Rains,nan
+Texas,Randall,nan
+Texas,Reagan,nan
+Texas,Real,nan
+Texas,Red River,nan
+Texas,Reeves,nan
+Texas,Refugio,nan
+Texas,Roberts,nan
+Texas,Robertson,5.535911247
+Texas,Rockwall,nan
+Texas,Runnels,nan
+Texas,Rusk,nan
+Texas,Sabine,nan
+Texas,San Augustine,nan
+Texas,San Jacinto,nan
+Texas,San Patricio,nan
+Texas,San Saba,nan
+Texas,Schleicher,nan
+Texas,Scurry,nan
+Texas,Shackelford,nan
+Texas,Shelby,nan
+Texas,Sherman,nan
+Texas,Smith,nan
+Texas,Somervell,nan
+Texas,Starr,nan
+Texas,Stephens,nan
+Texas,Sterling,nan
+Texas,Stonewall,nan
+Texas,Sutton,nan
+Texas,Swisher,nan
+Texas,Tarrant,nan
+Texas,Taylor,4.326187521
+Texas,Terrell,nan
+Texas,Terry,nan
+Texas,Throckmorton,nan
+Texas,Titus,nan
+Texas,Tom Green,nan
+Texas,Travis,nan
+Texas,Trinity,6.539911628
+Texas,Tyler,nan
+Texas,Upshur,nan
+Texas,Upton,nan
+Texas,Uvalde,nan
+Texas,Val Verde,nan
+Texas,Van Zandt,nan
+Texas,Victoria,nan
+Texas,Walker,nan
+Texas,Waller,nan
+Texas,Ward,nan
+Texas,Washington,3.119795173
+Texas,Webb,nan
+Texas,Wharton,nan
+Texas,Wheeler,nan
+Texas,Wichita,nan
+Texas,Wilbarger,nan
+Texas,Willacy,nan
+Texas,Williamson,2.52716437
+Texas,Wilson,5.12125385
+Texas,Winkler,nan
+Texas,Wise,nan
+Texas,Wood,nan
+Texas,Yoakum,nan
+Texas,Young,nan
+Texas,Zapata,nan
+Texas,Zavala,nan
+Washington,Adams,nan
+Washington,Asotin,nan
+Washington,Benton,nan
+Washington,Chelan,nan
+Washington,Clallam,nan
+Washington,Clark,nan
+Washington,Columbia,6.501360089
+Washington,Cowlitz,nan
+Washington,Douglas,nan
+Washington,Ferry,2.581303567
+Washington,Franklin,6.273784935
+Washington,Garfield,2.296686769
+Washington,Grant,nan
+Washington,Grays Harbor,nan
+Washington,Island,nan
+Washington,Jefferson,5.191931408
+Washington,King,nan
+Washington,Kitsap,7.706488967
+Washington,Kittitas,nan
+Washington,Klickitat,nan
+Washington,Lewis,3.588054925
+Washington,Lincoln,4.778802786
+Washington,Mason,nan
+Washington,Okanogan,nan
+Washington,Pacific,nan
+Washington,Pend Oreille,nan
+Washington,Pierce,nan
+Washington,San Juan,nan
+Washington,Skagit,5.278290398
+Washington,Skamania,nan
+Washington,Snohomish,nan
+Washington,Spokane,nan
+Washington,Stevens,4.922159477
+Washington,Thurston,nan
+Washington,Wahkiakum,nan
+Washington,Walla Walla,nan
+Washington,Whatcom,nan
+Washington,Whitman,nan
+Washington,Yakima,nan
+New York,Albany,nan
+New York,Allegany,nan
+New York,Bronx,nan
+New York,Broome,nan
+New York,Cattaraugus,nan
+New York,Cayuga,nan
+New York,Chautauqua,nan
+New York,Chemung,nan
+New York,Chenango,nan
+New York,Clinton,nan
+New York,Columbia,6.501360089
+New York,Cortland,nan
+New York,Delaware,5.497645214
+New York,Dutchess,nan
+New York,Erie,nan
+New York,Essex,nan
+New York,Franklin,6.273784935
+New York,Fulton,nan
+New York,Genesee,nan
+New York,Greene,nan
+New York,Hamilton,5.786801428
+New York,Herkimer,nan
+New York,Jefferson,5.191931408
+New York,Kings,nan
+New York,Lewis,3.588054925
+New York,Livingston,nan
+New York,Madison,3.191309273
+New York,Monroe,3.051220924
+New York,Montgomery,4.809386972
+New York,Nassau,nan
+New York,New York,nan
+New York,Niagara,nan
+New York,Oneida,nan
+New York,Onondaga,nan
+New York,Ontario,nan
+New York,Orange,nan
+New York,Orleans,7.437109947
+New York,Oswego,nan
+New York,Otsego,nan
+New York,Putnam,1.624462605
+New York,Queens,nan
+New York,Rensselaer,nan
+New York,Richmond,nan
+New York,Rockland,nan
+New York,St. Lawrence,nan
+New York,Saratoga,nan
+New York,Schenectady,nan
+New York,Schoharie,nan
+New York,Schuyler,nan
+New York,Seneca,nan
+New York,Steuben,nan
+New York,Suffolk,nan
+New York,Sullivan,4.936308353
+New York,Tioga,nan
+New York,Tompkins,nan
+New York,Ulster,nan
+New York,Warren,nan
+New York,Washington,3.119795173
+New York,Wayne,4.603117332
+New York,Westchester,nan
+New York,Wyoming,nan
+New York,Yates,nan
+Nevada,Churchill,nan
+Nevada,Clark,nan
+Nevada,Douglas,nan
+Nevada,Elko,nan
+Nevada,Esmeralda,nan
+Nevada,Eureka,nan
+Nevada,Humboldt,nan
+Nevada,Lander,nan
+Nevada,Lincoln,4.778802786
+Nevada,Lyon,nan
+Nevada,Mineral,nan
+Nevada,Nye,nan
+Nevada,Pershing,nan
+Nevada,Storey,nan
+Nevada,Washoe,4.194264784
+Nevada,White Pine,nan
+Nevada,"Carson City, Consolidated Municipality of",nan
+Pennsylvania,Adams,nan
+Pennsylvania,Allegheny,nan
+Pennsylvania,Armstrong,nan
+Pennsylvania,Beaver,nan
+Pennsylvania,Bedford,nan
+Pennsylvania,Berks,2.903420925
+Pennsylvania,Blair,nan
+Pennsylvania,Bradford,nan
+Pennsylvania,Bucks,3.377197981
+Pennsylvania,Butler,3.829443827
+Pennsylvania,Cambria,nan
+Pennsylvania,Cameron,nan
+Pennsylvania,Carbon,nan
+Pennsylvania,Centre,nan
+Pennsylvania,Chester,6.86076954
+Pennsylvania,Clarion,nan
+Pennsylvania,Clearfield,nan
+Pennsylvania,Clinton,nan
+Pennsylvania,Columbia,6.501360089
+Pennsylvania,Crawford,9.524970651
+Pennsylvania,Cumberland,nan
+Pennsylvania,Dauphin,nan
+Pennsylvania,Delaware,5.497645214
+Pennsylvania,Elk,nan
+Pennsylvania,Erie,nan
+Pennsylvania,Fayette,nan
+Pennsylvania,Forest,nan
+Pennsylvania,Franklin,6.273784935
+Pennsylvania,Fulton,nan
+Pennsylvania,Greene,nan
+Pennsylvania,Huntingdon,nan
+Pennsylvania,Indiana,nan
+Pennsylvania,Jefferson,5.191931408
+Pennsylvania,Juniata,nan
+Pennsylvania,Lackawanna,nan
+Pennsylvania,Lancaster,nan
+Pennsylvania,Lawrence,nan
+Pennsylvania,Lebanon,nan
+Pennsylvania,Lehigh,nan
+Pennsylvania,Luzerne,nan
+Pennsylvania,Lycoming,nan
+Pennsylvania,McKean,nan
+Pennsylvania,Mercer,nan
+Pennsylvania,Mifflin,nan
+Pennsylvania,Monroe,3.051220924
+Pennsylvania,Montgomery,4.809386972
+Pennsylvania,Montour,nan
+Pennsylvania,Northampton,nan
+Pennsylvania,Northumberland,nan
+Pennsylvania,Perry,nan
+Pennsylvania,Philadelphia,nan
+Pennsylvania,Pike,nan
+Pennsylvania,Potter,nan
+Pennsylvania,Schuylkill,nan
+Pennsylvania,Snyder,nan
+Pennsylvania,Somerset,nan
+Pennsylvania,Sullivan,4.936308353
+Pennsylvania,Susquehanna,nan
+Pennsylvania,Tioga,nan
+Pennsylvania,Union,1.269194484
+Pennsylvania,Venango,nan
+Pennsylvania,Warren,nan
+Pennsylvania,Washington,3.119795173
+Pennsylvania,Wayne,4.603117332
+Pennsylvania,Westmoreland,nan
+Pennsylvania,Wyoming,nan
+Pennsylvania,York,nan
+Ohio,Adams,nan
+Ohio,Allen,nan
+Ohio,Ashland,nan
+Ohio,Ashtabula,nan
+Ohio,Athens,nan
+Ohio,Auglaize,nan
+Ohio,Belmont,nan
+Ohio,Brown,4.664063379
+Ohio,Butler,3.829443827
+Ohio,Carroll,nan
+Ohio,Champaign,nan
+Ohio,Clark,nan
+Ohio,Clermont,nan
+Ohio,Clinton,nan
+Ohio,Columbiana,nan
+Ohio,Coshocton,nan
+Ohio,Crawford,9.524970651
+Ohio,Cuyahoga,nan
+Ohio,Darke,nan
+Ohio,Defiance,nan
+Ohio,Delaware,5.497645214
+Ohio,Erie,nan
+Ohio,Fairfield,nan
+Ohio,Fayette,nan
+Ohio,Franklin,6.273784935
+Ohio,Fulton,nan
+Ohio,Gallia,nan
+Ohio,Geauga,nan
+Ohio,Greene,nan
+Ohio,Guernsey,nan
+Ohio,Hamilton,5.786801428
+Ohio,Hancock,nan
+Ohio,Hardin,2.112467885
+Ohio,Harrison,7.021929473
+Ohio,Henry,nan
+Ohio,Highland,nan
+Ohio,Hocking,nan
+Ohio,Holmes,nan
+Ohio,Huron,nan
+Ohio,Jackson,7.13179186
+Ohio,Jefferson,5.191931408
+Ohio,Knox,nan
+Ohio,Lake,nan
+Ohio,Lawrence,nan
+Ohio,Licking,nan
+Ohio,Logan,nan
+Ohio,Lorain,nan
+Ohio,Lucas,nan
+Ohio,Madison,3.191309273
+Ohio,Mahoning,nan
+Ohio,Marion,5.492814369
+Ohio,Medina,nan
+Ohio,Meigs,nan
+Ohio,Mercer,nan
+Ohio,Miami,nan
+Ohio,Monroe,3.051220924
+Ohio,Montgomery,4.809386972
+Ohio,Morgan,nan
+Ohio,Morrow,nan
+Ohio,Muskingum,nan
+Ohio,Noble,nan
+Ohio,Ottawa,nan
+Ohio,Paulding,nan
+Ohio,Perry,nan
+Ohio,Pickaway,nan
+Ohio,Pike,nan
+Ohio,Portage,nan
+Ohio,Preble,nan
+Ohio,Putnam,1.624462605
+Ohio,Richland,nan
+Ohio,Ross,nan
+Ohio,Sandusky,nan
+Ohio,Scioto,nan
+Ohio,Seneca,nan
+Ohio,Shelby,nan
+Ohio,Stark,6.100899801
+Ohio,Summit,nan
+Ohio,Trumbull,nan
+Ohio,Tuscarawas,nan
+Ohio,Union,1.269194484
+Ohio,Van Wert,nan
+Ohio,Vinton,nan
+Ohio,Warren,nan
+Ohio,Washington,3.119795173
+Ohio,Wayne,4.603117332
+Ohio,Williams,nan
+Ohio,Wood,nan
+Ohio,Wyandot,nan
