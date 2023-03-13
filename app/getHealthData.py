@@ -1,13 +1,8 @@
 import pandas as pd
-import numpy as np
-import os
 
-data_path_clinical_data = os.path.join(os.getcwd(), 'app/data/2022 County Health Rankings Data.xlsx')
-clinical_data_excel = pd.read_excel(data_path_clinical_data ,sheet_name = 3,header=1)
-
-def get_health_data(state_name, county_name):
+def get_health_data(state_name, county_name, excel_data, years):
     print("Reading", state_name, county_name)
-    selected_df = clinical_data_excel[["State","County","Average Number of Physically Unhealthy Days","Average Number of Mentally Unhealthy Days",]]
+    selected_df = excel_data[-1][["State","County","Average Number of Physically Unhealthy Days","Average Number of Mentally Unhealthy Days",]]
     selected_df = selected_df.loc[(selected_df['State'] == state_name) & (selected_df['County'] == county_name)]
     del selected_df[selected_df.columns.values[0]]
     del selected_df[selected_df.columns.values[0]]
