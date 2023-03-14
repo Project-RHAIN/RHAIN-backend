@@ -78,10 +78,12 @@ def get_health_data_function(state_name: str, county_name: str, trend: bool):
 #----------------------------------------------------------------------------------------
 
 @app.get("/feature-score")
-def get_feature_score(state_name: str, county_name: str, feature_name: str):
-    # http://localhost:8000/feature-score?state_name=California&county_name=Marin&feature_name=% Fair or Poor Health
+def get_feature_score(state_name: str, county_name: str):
+    # http://localhost:8000/feature-score?state_name=California&county_name=Marin
     # Filter the rows by county
-    data = getFeatureScore(state_name, county_name, feature_name)
+    data = []
+    for feature_name in ["Primary Care Physicians Rate","Average Number of Physically Unhealthy Days", "% Vaccinated","% With Access to Exercise Opportunities","% Uninsured","Preventable Hospitalization Rate","Years of Potential Life Lost Rate","Food Environment Index"]:        
+        data.append(getFeatureScore(state_name, county_name, feature_name))
     # Convert the selected data to a dictionary and return it
     return data
 
