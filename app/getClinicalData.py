@@ -12,7 +12,7 @@ def getClinicalData(state_name, county_name, excel_data, years, trend):
     print("Reading", state_name, county_name)
     # Read the Excel file into a pandas dataframe    
     # print("p1")
-    if trend:
+    if not trend:
         selected_df = excel_data[-1][["State","County","Primary Care Physicians Ratio","Dentist Ratio","Mental Health Provider Ratio"]]    
         selected_df = selected_df.loc[(selected_df['State'] == state_name) & (selected_df['County'] == county_name)]
         del selected_df[selected_df.columns.values[0]]
