@@ -1,12 +1,16 @@
 import pandas as pd
 
-def getHealthData(state_name, county_name, excel_data, years):
+def getHealthData(state_name, county_name, excel_data, years, trend):
     print("Reading", state_name, county_name)
-    selected_df = excel_data[-1][["State","County","% Physically Inactive","% Adults with Obesity","% With Access to Exercise Opportunities"]]
-    selected_df = selected_df.loc[(selected_df['State'] == state_name) & (selected_df['County'] == county_name)]
-    del selected_df[selected_df.columns.values[0]]
-    del selected_df[selected_df.columns.values[0]]
-    print(selected_df)
+
+    if not trend:
+
+        selected_df = excel_data[-1][["State","County","% Physically Inactive","% Adults with Obesity","% With Access to Exercise Opportunities"]]
+        selected_df = selected_df.loc[(selected_df['State'] == state_name) & (selected_df['County'] == county_name)]
+        del selected_df[selected_df.columns.values[0]]
+        del selected_df[selected_df.columns.values[0]]
+        print(selected_df)
+        return selected_df
 
     dfs = []
     for i in range(len(excel_data)):
@@ -18,6 +22,4 @@ def getHealthData(state_name, county_name, excel_data, years):
         selected_df_multiple.insert(0,"Year",int(years[i]))
         dfs.append(selected_df_multiple)
     
-    print(pd.concat(dfs))
-
-    return selected_df
+    return pd.concat(dfs)

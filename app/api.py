@@ -41,37 +41,37 @@ async def read_root() -> dict:
 
 
 @app.get("/clinical-care")
-def get_county_info(state_name: str, county_name: str):
+def get_county_info(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
-    data = getClinicalData(state_name, county_name, excel_data, years)
+    data = getClinicalData(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
 @app.get("/health-behavior")
-def get_county_info(state_name: str, county_name: str):
+def get_county_info(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
-    data = getHealthData(state_name, county_name, excel_data, years)
+    data = getHealthData(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
 @app.get("/regulated-industries")
-def get_regulated_industry_data_fuction(state_name: str, county_name: str):
+def get_regulated_industry_data_fuction(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
-    data = get_regulated_industries_data(state_name, county_name, excel_data, years)
+    data = get_regulated_industries_data(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
 @app.get("/crime")
-def get_crime_data_function(state_name: str, county_name: str):
+def get_crime_data_function(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
-    data = get_crime_data(state_name, county_name, excel_data, years)
+    data = get_crime_data(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
 @app.get("/health")
-def get_health_data_function(state_name: str, county_name: str):
+def get_health_data_function(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
-    data = get_health_data(state_name, county_name, excel_data, years)
+    data = get_health_data(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
