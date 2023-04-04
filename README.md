@@ -1,17 +1,20 @@
 # RHAIN-backend
 
-1. Create a virtual env in the root folder:
+1. Install Docker and docker-compose in your system
 
-python3 -m venv venv
+(If you are running windows you will have to install WSL 2 to run docker through WSL)
 
-2. Activate Virtual env
+2. Navigate to the RHAIN-backend folder
 
-However u want
+3. Run the container
 
-3. Install requirements
+If you are running it for the first time, run this:
 
-pip install requirements.txt
+```
+docker-compose up --build
+```
+Otherwise, do it without the build:
+```
+docker-compose up
+```
 
-4. Run the server
-
-python main.py
