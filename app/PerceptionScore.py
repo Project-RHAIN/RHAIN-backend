@@ -1,6 +1,6 @@
-# import tensorflow as tf
-# import numpy as np
-# from transformers import DistilBertTokenizer
+import tensorflow as tf
+import numpy as np
+from transformers import DistilBertTokenizer
 import random
 import pandas as pd
 from random import sample
@@ -17,8 +17,8 @@ with open(data_path_scores, newline='') as csv_file:
     rows = {(row['State'], row['County']): row['Score'] for row in reader}
 
 df = pd.read_csv(data_path_scores)
-# dbModel = tf.keras.models.load_model(data_path_model)
-# dbTokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
+dbModel = tf.keras.models.load_model(data_path_model)
+dbTokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
 
 def get_reviews(county_name):
