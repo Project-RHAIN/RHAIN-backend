@@ -29,8 +29,8 @@ def getFeatureScore(state, county, feature_name):
     feature_specific = county_data.loc[county_data["Feature Name"]==feature_name]
     rel_val = None
     for dx,d in feature_specific.iterrows():
-         rel_val = round(d["Zscore"],2)
-    return {"Feature Score":rel_val}
+         rel_val = round(d["Zscore"]/10,2)
+    return {feature_name: rel_val}
 
 
 # getOverallObjectiveScore("California", "Marin", "% Fair or Poor Health")
