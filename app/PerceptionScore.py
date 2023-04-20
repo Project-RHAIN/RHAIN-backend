@@ -8,15 +8,15 @@ import os
 import csv
 
 
-data_path_reviews = os.path.join(os.getcwd(), 'app\data\BackendReviews.csv')
-data_path_scores = os.path.join(os.getcwd(), 'app\data\Scores.csv')
-data_path_model = os.path.join(os.getcwd(), 'app\DistilBert')
+data_path_reviews = os.path.join(os.getcwd(), 'app/data/BackendReviews.csv')
+data_path_scores = os.path.join(os.getcwd(), 'app/data/Scores.csv')
+data_path_model = os.path.join(os.getcwd(), 'app/DistilBert')
 
 with open(data_path_scores, newline='') as csv_file:
     reader = csv.DictReader(csv_file)
     rows = {(row['State'], row['County']): row['Score'] for row in reader}
 
-df = pd.read_csv(data_path_reviews)
+df = pd.read_csv(data_path_scores)
 dbModel = tf.keras.models.load_model(data_path_model)
 dbTokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
@@ -48,7 +48,7 @@ def score_compute(reviews, model, tokenizer):
 #     return {"Perception score": score}
 
 def get_score(state_name, county_name):
-    score = rows.get((state_name, county_name), 'nan')
+    score = rows.get((state_name, county_name))
     if score != 'nan':
         return score
     else:
