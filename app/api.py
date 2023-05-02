@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .getClinicalData import getClinicalData
-from .getHealthBehaviors import getHealthData
-from .getRegualtedIndustryData import get_regulated_industries_data
+from app.graphAPI.getClinicalData import getClinicalData
+from app.graphAPI.getHealthBehaviors import getHealthData
+from app.graphAPI.getRegualtedIndustryData import get_regulated_industries_data
 from .ObjectiveScore import getOverallObjectiveScore, getFeatureScore
 from .PerceptionScore import get_sentiment_score
-from .getCrimeData import get_crime_data
-from .getHealthData import get_health_data
+from app.graphAPI.getCrimeData import get_crime_data
+from app.graphAPI.getHealthData import get_health_data
 
 import pandas as pd
 import os

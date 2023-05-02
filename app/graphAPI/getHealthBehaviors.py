@@ -14,7 +14,7 @@ def getHealthData(state_name, county_name, excel_data, years, trend):
 
     dfs = []
     for i in range(len(excel_data)):
-        print(i)
+        # print(i)
         selected_df_multiple = excel_data[i][["State","County","% Physically Inactive","% Adults with Obesity","% With Access to Exercise Opportunities"]]
         selected_df_multiple = selected_df_multiple.loc[(selected_df_multiple['State'] == state_name) & (selected_df_multiple['County'] == county_name)]
         del selected_df_multiple[selected_df_multiple.columns.values[0]]
