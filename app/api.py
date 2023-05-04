@@ -8,6 +8,8 @@ from .PerceptionScore import get_sentiment_score
 from app.dataAPI.getCrimeData import get_crime_data
 from app.dataAPI.getHealthData import get_health_data
 
+from app.dataAPI.getMapVisData import getMapVisData
+
 import pandas as pd
 import os
 
@@ -27,6 +29,9 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+############################################################################################
+# Init
+
 years = ["2018", "2019", "2020", "2021", "2022"]
 excel_data = []
 
@@ -34,11 +39,17 @@ for year in years:
     rankings_path = os.path.join(os.getcwd(), 'app/data/' + year + ' County Health Rankings Data.xlsx')
     excel_data.append(pd.read_excel(rankings_path ,sheet_name = 3,header=1))
 
+############################################################################################
+# Home
+############################################################################################
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
     return {"message": "Welcome to the RHAIN server"}
 
+############################################################################################
+# Visualization Data APIs
+############################################################################################
 
 @app.get("/clinical-care")
 def get_county_info(state_name: str, county_name: str, trend: bool):
@@ -75,7 +86,18 @@ def get_health_data_function(state_name: str, county_name: str, trend: bool):
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
-#----------------------------------------------------------------------------------------
+############################################################################################
+# Map Data APIs
+############################################################################################
+
+@app.get("/map-vis")
+def get_map_vis(state_name: str, map_vis: str):
+    data = getMapVisData(state_name, mapVis=map_vis, excel_data=excel_data)
+    return data.to_dict(orient='records')
+
+############################################################################################
+# Score APIs
+############################################################################################
 
 @app.get("/feature-score")
 def get_feature_score(state_name: str, county_name: str):
