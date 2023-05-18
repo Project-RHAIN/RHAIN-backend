@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .getClinicalData import getClinicalData
 from .getHealthBehaviors import getHealthData
 from .getRegualtedIndustryData import get_regulated_industries_data
-from .ObjectiveScore import getOverallObjectiveScore, getFeatureScore
+from .ObjectiveScore import getOverallObjectiveScore, getFeatureScore, getCompareScore
 from .PerceptionScore import get_sentiment_score
 from .getCrimeData import get_crime_data
 from .getHealthData import get_health_data
@@ -93,7 +93,7 @@ def get_compare_score(state_name: str, county_name: str):
     # http://localhost:8000/compare-score?state_name=California&county_name=Marin
     # Filter the rows by county
     data = []
-    for feature_name in ["Preventable Hospitalization Rate","Primary Care Physicians Rate", "Food Environment Index"]:        
+    for feature_name in ["Primary Care Physicians Rate","Average Number of Physically Unhealthy Days", "% Vaccinated","% With Access to Exercise Opportunities","% Uninsured","Preventable Hospitalization Rate","Years of Potential Life Lost Rate","Food Environment Index"]:        
         data.append(getFeatureScore(state_name, county_name, feature_name))
     # Convert the selected data to a dictionary and return it
     return data
