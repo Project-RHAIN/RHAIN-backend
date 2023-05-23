@@ -4,7 +4,9 @@ import numpy as np
 def convertRatio (x):
     if x is np.nan:
         return np.nan
-    a, b = x.split(':') 
+    a, b = x.split(':')
+    if int(b) == 0:
+        return int(a) 
     c = int(a)/int(b) 
     return c
 
