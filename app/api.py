@@ -93,8 +93,8 @@ def get_compare_score(state_name: str, county_name: str):
     # http://localhost:8000/compare-score?state_name=California&county_name=Marin
     # Filter the rows by county
     data = []
-    for feature_name in ["Primary Care Physicians Rate","Average Number of Physically Unhealthy Days", "% Vaccinated","% With Access to Exercise Opportunities","% Uninsured","Preventable Hospitalization Rate","Years of Potential Life Lost Rate","Food Environment Index"]:        
-        data.append(getFeatureScore(state_name, county_name, feature_name))
+    for feature_name in ["Education","Employment","Income","Health Behaviors","Physical Environment"]:        
+        data.append(getCompareScore(state_name, county_name, feature_name))
     # Convert the selected data to a dictionary and return it
     return data
 
