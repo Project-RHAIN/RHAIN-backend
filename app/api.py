@@ -1,12 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .getClinicalData import getClinicalData
-from .getHealthBehaviors import getHealthData
-from .getRegualtedIndustryData import get_regulated_industries_data
+from app.dataAPI.getClinicalData import getClinicalData
+from app.dataAPI.getHealthBehaviors import getHealthData
+from app.dataAPI.getRegualtedIndustryData import get_regulated_industries_data
 from .ObjectiveScore import getOverallObjectiveScore, getFeatureScore, getCompareScore
 from .PerceptionScore import get_sentiment_score
-from .getCrimeData import get_crime_data
-from .getHealthData import get_health_data
+from app.dataAPI.getCrimeData import get_crime_data
+from app.dataAPI.getHealthData import get_health_data
+
+from app.dataAPI.getMapVisData import getMapVisData
 
 
 import pandas as pd
@@ -28,6 +30,9 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+############################################################################################
+# Init
+
 years = ["2018", "2019", "2020", "2021", "2022"]
 excel_data = []
 
@@ -35,11 +40,17 @@ for year in years:
     rankings_path = os.path.join(os.getcwd(), 'app/data/' + year + ' County Health Rankings Data.xlsx')
     excel_data.append(pd.read_excel(rankings_path ,sheet_name = 3,header=1))
 
+############################################################################################
+# Home
+############################################################################################
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
     return {"message": "Welcome to the RHAIN server"}
 
+############################################################################################
+# Visualization Data APIs
+############################################################################################
 
 @app.get("/clinical-care")
 def get_county_info(state_name: str, county_name: str, trend: bool):
@@ -56,7 +67,7 @@ def get_county_info(state_name: str, county_name: str, trend: bool):
     return data.to_dict(orient='records')
 
 @app.get("/regulated-industries")
-def get_regulated_industry_data_fuction(state_name: str, county_name: str, trend: bool):
+def get_regulated_industry_data_function(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
     data = get_regulated_industries_data(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
@@ -76,14 +87,25 @@ def get_health_data_function(state_name: str, county_name: str, trend: bool):
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
-#----------------------------------------------------------------------------------------
+############################################################################################
+# Map Data APIs
+############################################################################################
+
+@app.get("/map-vis")
+def get_map_vis(state_name: str, map_vis: str):
+    data = getMapVisData(state_name, mapVis=map_vis, excel_data=excel_data)
+    return data.to_dict(orient='records')
+
+############################################################################################
+# Score APIs
+############################################################################################
 
 @app.get("/feature-score")
 def get_feature_score(state_name: str, county_name: str):
     # http://localhost:8000/feature-score?state_name=California&county_name=Marin
     # Filter the rows by county
     data = []
-    for feature_name in ["Primary Care Physicians Rate","Average Number of Physically Unhealthy Days", "% Vaccinated","% With Access to Exercise Opportunities","% Uninsured","Preventable Hospitalization Rate","Years of Potential Life Lost Rate","Food Environment Index"]:        
+    for feature_name in ["Primary Care Physicians Rate","Average Number of Physically Unhealthy Days", "Years of Potential Life Lost Rate","Food Environment Index","% Vaccinated","% With Access to Exercise Opportunities","% Uninsured","Preventable Hospitalization Rate"]:        
         data.append(getFeatureScore(state_name, county_name, feature_name))
     # Convert the selected data to a dictionary and return it
     return data

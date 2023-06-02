@@ -1,4 +1,5 @@
 import pandas as pd
+import openpyxl
 import os
 
 data_path_cumulative_score = os.path.join(os.getcwd(), 'app/data/cumulative_score.xlsx')
