@@ -25,7 +25,8 @@ class CredentialRequest(BaseModel):
 
 class UserResponse(BaseModel):
     email: str
-    name: str
+    first_name: str
+    last_name: str
     picture: str
 
 origins = [
@@ -71,10 +72,11 @@ def process_credential(credential_request: CredentialRequest):
     # Assuming you have some logic to process the credential request and retrieve user data
     claims = jwt.decode(credential_request.credential, verify=False)    
     email = claims['email']
-    name = claims['name']
+    first_name = claims['given_name']
+    last_name = claims['family_name']
     picture = claims['picture']
     # print("DECODED", claims)
-    user_response = UserResponse(email=email, name=name, picture=picture)
+    user_response = UserResponse(email=email, first_name=first_name, last_name=last_name, picture=picture)
     return user_response
 
 ############################################################################################
