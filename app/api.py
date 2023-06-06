@@ -7,6 +7,8 @@ from .ObjectiveScore import getOverallObjectiveScore, getFeatureScore, getCompar
 from .PerceptionScore import get_sentiment_score
 from app.dataAPI.getCrimeData import get_crime_data
 from app.dataAPI.getHealthData import get_health_data
+from pydantic import BaseModel
+from google.auth import jwt
 
 from app.dataAPI.getMapVisData import getMapVisData
 
@@ -15,6 +17,15 @@ import pandas as pd
 import os
 
 app = FastAPI()
+
+class CredentialRequest(BaseModel):
+    clientId: str
+    credential: str
+
+class UserResponse(BaseModel):
+    email: str
+    name: str
+    picture: str
 
 origins = [
     "http://localhost:3000",
@@ -48,6 +59,19 @@ for year in years:
 async def read_root() -> dict:
     return {"message": "Welcome to the RHAIN server"}
 
+############################################################################################
+# Google Verify
+############################################################################################
+@app.post("/verifyGoogle")
+def process_credential(credential_request: CredentialRequest):
+    # Assuming you have some logic to process the credential request and retrieve user data
+    claims = jwt.decode(credential_request.credential, verify=False)    
+    email = claims['email']
+    name = claims['name']
+    picture = claims['picture']
+    # print("DECODED", claims)
+    user_response = UserResponse(email=email, name=name, picture=picture)
+    return user_response
 ############################################################################################
 # Visualization Data APIs
 ############################################################################################
