@@ -7,6 +7,7 @@ from .ObjectiveScore import getOverallObjectiveScore, getFeatureScore, getCompar
 from .PerceptionScore import get_sentiment_score
 from app.dataAPI.getCrimeData import get_crime_data
 from app.dataAPI.getHealthData import get_health_data
+from app.dataAPI.getRegionalData import get_regional_data
 from pydantic import BaseModel
 from google.auth import jwt
 
@@ -51,6 +52,9 @@ for year in years:
     rankings_path = os.path.join(os.getcwd(), 'app/data/' + year + ' County Health Rankings Data.xlsx')
     excel_data.append(pd.read_excel(rankings_path ,sheet_name = 3,header=1))
 
+regional_data_path = os.path.join(os.getcwd(), 'app/data/Population_Income_Area_2022.xlsx')
+regional_data_excel = pd.read_excel(regional_data_path)
+
 ############################################################################################
 # Home
 ############################################################################################
@@ -72,6 +76,17 @@ def process_credential(credential_request: CredentialRequest):
     # print("DECODED", claims)
     user_response = UserResponse(email=email, name=name, picture=picture)
     return user_response
+
+############################################################################################
+# Regional Data API
+############################################################################################
+
+@app.get("/regional-data")
+def get_regional_data_function(state_name: str, county_name: str):
+    # Filter the rows by county
+    data = get_regional_data(state_name, county_name, regional_data_excel)
+    # Convert the selected data to a dictionary and return it
+    return data.to_dict(orient='records')
 ############################################################################################
 # Visualization Data APIs
 ############################################################################################
