@@ -2,3 +2,4 @@ venv
 uvenv
 __pycache__
 DistilBert
+*.tar
