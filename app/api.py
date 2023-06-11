@@ -59,15 +59,18 @@ regional_data_excel = pd.read_excel(regional_data_path)
 ############################################################################################
 # Home
 ############################################################################################
-
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
     return {"message": "Welcome to the RHAIN server"}
 
+@app.get("/api", tags=["root"])
+async def read_root() -> dict:
+    return {"message": "Welcome to the RHAIN server API"}
+
 ############################################################################################
 # Google Verify
 ############################################################################################
-@app.post("/verifyGoogle")
+@app.post("/api/verifyGoogle")
 def process_credential(credential_request: CredentialRequest):
     # Assuming you have some logic to process the credential request and retrieve user data
     claims = jwt.decode(credential_request.credential, verify=False)    
@@ -83,7 +86,7 @@ def process_credential(credential_request: CredentialRequest):
 # Regional Data API
 ############################################################################################
 
-@app.get("/regional-data")
+@app.get("/api/regional-data")
 def get_regional_data_function(state_name: str, county_name: str):
     # Filter the rows by county
     data = get_regional_data(state_name, county_name, regional_data_excel)
@@ -93,35 +96,35 @@ def get_regional_data_function(state_name: str, county_name: str):
 # Visualization Data APIs
 ############################################################################################
 
-@app.get("/clinical-care")
+@app.get("/api/clinical-care")
 def get_county_info(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
     data = getClinicalData(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
-@app.get("/health-behavior")
+@app.get("/api/health-behavior")
 def get_county_info(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
     data = getHealthData(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
-@app.get("/regulated-industries")
+@app.get("/api/regulated-industries")
 def get_regulated_industry_data_function(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
     data = get_regulated_industries_data(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
-@app.get("/crime")
+@app.get("/api/crime")
 def get_crime_data_function(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
     data = get_crime_data(state_name, county_name, excel_data, years, trend)
     # Convert the selected data to a dictionary and return it
     return data.to_dict(orient='records')
 
-@app.get("/health")
+@app.get("/api/health")
 def get_health_data_function(state_name: str, county_name: str, trend: bool):
     # Filter the rows by county
     data = get_health_data(state_name, county_name, excel_data, years, trend)
@@ -132,7 +135,7 @@ def get_health_data_function(state_name: str, county_name: str, trend: bool):
 # Map Data APIs
 ############################################################################################
 
-@app.get("/map-vis")
+@app.get("/api/map-vis")
 def get_map_vis(state_name: str, map_vis: str):
     data = getMapVisData(state_name, mapVis=map_vis, excel_data=excel_data)
     return data.to_dict(orient='records')
@@ -141,7 +144,7 @@ def get_map_vis(state_name: str, map_vis: str):
 # Score APIs
 ############################################################################################
 
-@app.get("/feature-score")
+@app.get("/api/feature-score")
 def get_feature_score(state_name: str, county_name: str):
     # http://localhost:8000/feature-score?state_name=California&county_name=Marin
     # Filter the rows by county
@@ -151,7 +154,7 @@ def get_feature_score(state_name: str, county_name: str):
     # Convert the selected data to a dictionary and return it
     return data
 
-@app.get("/compare-score")
+@app.get("/api/compare-score")
 def get_compare_score(state_name: str, county_name: str):
     # http://localhost:8000/compare-score?state_name=California&county_name=Marin
     # Filter the rows by county
@@ -162,7 +165,7 @@ def get_compare_score(state_name: str, county_name: str):
     return data
 
 
-@app.get("/health-score")
+@app.get("/api/health-score")
 def get_county_info(state_name: str, county_name: str):
     # http://localhost:8000/health-score?state_name=California&county_name=Marin
     # Filter the rows by county
@@ -170,7 +173,7 @@ def get_county_info(state_name: str, county_name: str):
     # Convert the selected data to a dictionary and return it
     return data
 
-@app.get("/perception-score")
+@app.get("/api/perception-score")
 def get_perception_score(state_name: str, county_name: str):
     # http://localhost:8000/perception-score?state_name=California&county_name=Los%20Angeles
     data = get_sentiment_score(state_name, county_name)
